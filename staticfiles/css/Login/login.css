@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"),
+    url("../../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+body {
+  margin: 0 !important;
+}
+
+.main-container {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: -webkit-fill-available;
+  background-image: url(../../assets/login.png);
+  display: flex;
+  padding-left: 17%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.login-container {
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  position: relative;
+  left: 10%;
+  top: 50%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  color: white;
+  background-color: transparent;
+  padding-left: 10px;
+  border: transparent;
+  font-family: Montserrat-Regular;
+}
+
+input:focus,
+button:focus {
+  outline: transparent;
+}
+
+.login-button {
+  font-family: Montserrat-Regular;
+  background-color: white;
+  border: transparent;
+  text-transform: uppercase;
+  border-radius: 15px;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  height: 45px;
+}
+
+.error {
+  font-size: 14px;
+  text-align: left;
+  /* visibility: hidden; */
+}
+
+.error p {
+  transition-timing-function: ease;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-size: 30px;
+}
+
+
+.show {
+  text-align: center;
+  display: inline;
+  visibility: visible !important;
+}
+
+.login-label {
+  line-height: 3;
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+  font-family: Montserrat-Regular;
+  text-transform: capitalize;
+}
+
+.username-container,
+.password-container {
+  width: 90%;
+  border: 0.5px solid white;
+  border-radius: 15px;
+}
+
+.username-container,
+.password-container,
+.button-container {
+  display: flex;
+  height: 40px;
+}
+
+.button-container {
+  align-self: center;
+  width: 90%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.username-container img,
+.password-container img,
+.button-container img {
+  height: 20px;
+  width: 28px;
+  padding-left: 10px;
+  align-self: center;
+  display: flex;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 155px;
+  align-items: center;
+}
+
+.logo-container {
+  width: 50%;
+  align-self: center;
+}
+
+#userRole{
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Montserrat-Regular;
+}
+
+.login-user{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: white;
+}

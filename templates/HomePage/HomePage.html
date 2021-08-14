@@ -1,0 +1,371 @@
+{% load static %}
+{% load timestamp_to_time %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="{% static 'assets/Group6846.svg'%}" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/shared/constants.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/HomePage/HomePage.css' %}">
+    <script type="text/javascript" src="{% static 'js/shared/loader.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/shared/loader.css' %}">
+    <script type="text/javascript" src="{% static 'js/shared/cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/shared/constants.js' %}"></script>
+    <link href="{% static 'fonts/Montserrat-Regular.ttf' %}" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <div id="loader" class="center"></div>
+    <div class="main-container">
+        <div class="header-container">
+            {% include '../Shared/HeaderNavigation.html' %}
+            <div class="module-section">
+
+               </div>
+               <div class="parameters">
+               <form action = '' method="GET">
+                  <table>
+                     <tbody>
+                        <tr>
+  
+                        <tr>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-fromdate">fromdate</label></td>
+                                       <td><input class="parameter-input hasDatepicker date-type" id="param-fromdate" type="text" placeholder ="yyyy-mm-dd" name="fromdate"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-todate">todate</label></td>
+                                       <td><input class="parameter-input hasDatepicker date-type" id="param-todate" type="text" placeholder ="yyyy-mm-dd" name="todate"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-min">min</label></td>
+                                       <td><input class="parameter-input hasDatepicker date-type" id="param-min" type="text" name="min" placeholder ="yyyy-mm-dd" ></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-max">max</label></td>
+                                       <td><input class="parameter-input hasDatepicker date-type" id="param-max" type="text" name="max" placeholder ="yyyy-mm-dd" ></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-sort">sort</label></td>
+                                       <td>
+                                          <select name="sort" id="param-sort" class="parameter-select">
+                                             <option>activity</option>
+                                             <option>votes</option>
+                                             <option>creation</option>
+                                             <option>relevance</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-q">q</label></td>
+                                       <td><input class="parameter-input string-type" id="param-q" type="text" name="q"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-accepted">accepted</label></td>
+                                       <td>
+                                          <select name="accepted" id="param-accepted" class="parameter-select">
+                                             <option></option>
+                                             <option>True</option>
+                                             <option>False</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-answers">answers</label></td>
+                                       <td><input class="parameter-input number-type" id="param-answers" type="text" name="answers" pattern="[0-9]"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-body">body</label></td>
+                                       <td><input class="parameter-input string-type" id="param-body" type="text" name="body"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-closed">closed</label></td>
+                                       <td>
+                                          <select name="closed" id="param-closed" class="parameter-select">
+                                             <option></option>
+                                             <option>True</option>
+                                             <option>False</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-migrated">migrated</label></td>
+                                       <td>
+                                          <select name="migrated" id="param-migrated" class="parameter-select">
+                                             <option></option>
+                                             <option>True</option>
+                                             <option>False</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-notice">notice</label></td>
+                                       <td>
+                                          <select name="notice" id="param-notice" class="parameter-select">
+                                             <option></option>
+                                             <option>True</option>
+                                             <option>False</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-nottagged">nottagged</label></td>
+                                       <td><input class="parameter-input list-type" id="param-nottagged" type="text" name="nottagged"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-tagged">tagged</label></td>
+                                       <td><input class="parameter-input list-type" id="param-tagged" type="text" name="tagged"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-title">title</label></td>
+                                       <td><input class="parameter-input string-type" id="param-title" type="text" name="title"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-user">user</label></td>
+                                       <td><input class="parameter-input number-type" id="param-user" type="text" name="user"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-url">url</label></td>
+                                       <td><input class="parameter-input string-type" id="param-url" type="text" name="url"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-views">views</label></td>
+                                       <td><input class="parameter-input number-type" id="param-views" type="text" name="views" pattern="[0-9]"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-order">order</label></td>
+                                       <td>
+                                          <select name="order" id="param-order" class="parameter-select">
+                                             <option>desc</option>
+                                             <option>asc</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td>
+                              <table class="parameter">
+                                 <tbody>
+                                    <tr>
+                                       <td class="label-holder"><label for="param-wiki">wiki</label></td>
+                                       <td>
+                                          <select name="wiki" id="param-wiki" class="parameter-select">
+                                             <option></option>
+                                             <option>True</option>
+                                             <option>False</option>
+                                          </select>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <input type="submit" class="button button2" name="submit" class='submit-form'>
+               </form>
+               </div>
+               <div class="main-screen">     
+                <table id="">
+                    <thead>
+                        <tr>
+                            <th>User Name
+                            </th>
+
+                            <th>Reputation</th>
+                            </th>
+
+                            <th>Profile Link
+                            </th>
+                            <th>
+                              Total Answers
+                            </th>
+                            <th>Score
+                            </th>
+                            <th>Question Link
+                            </th>
+                            <th>last_activity_date
+                           </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in result %}
+                        <tr class="data-row">
+                            <td id="" value="{{data.display_name}}"> {{data.owner.display_name}}</td>
+                            <td id="" value="{{data.reputation}}">
+                                {{data.owner.reputation}}</td>
+                            <td id="" value="}}">
+                                <a href="{{data.owner.link}}" target="_blank">View Profile</a></td>
+                            <td id="" value="{{data.answer_count}}">
+                                {{data.answer_count}}</td>
+                            <td id="" value="{{data.score}}">
+                                {{data.score}}</td>
+                            <td id="" value="">
+                                <a href="{{data.link}}" target="_blank"> Question Link</a></td>
+                              </td>
+                              <td id="" value="{{data.last_activity_date}}">
+                                 {{data.last_activity_date|unix_to_datetime}}</td>
+                              
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if not result and not error %}
+               <div id="no-record-container">No Records Found</div>
+            {% endif %}
+            {% if error %}
+               <div id="no-record-container">{{error}}</div>
+            {% endif %}
+            <div class="tableFooter">
+                <div class="paginationContainer" id="tableFooter">
+                    {% if page.has_previous %}
+                        <a href="{% url 'advance_search_function' %}?page={{page.previous_page_number}}"
+                        style="font-size: 20px; font-weight: bolder;" > Previous Page</a>
+                    {% else %}
+                        <a href="#" style="color: gray;" > Previous</a>
+                    {% endif %}
+                    {% if page.has_next %}
+                        <a href="{% url 'advance_search_function' %}?page={{page.next_page_number}}"
+                        style="font-size: 20px; font-weight: bolder;" > Next Page </a>
+                     {% else %}
+                        <a href="#" style="color: gray;"> Next</a>
+                    {% endif %}
+                  </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

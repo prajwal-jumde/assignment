@@ -1,0 +1,104 @@
+.header-container {
+    display: flex;
+    font-family: Montserrat-Regular;
+    width: 82%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.header-section {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    box-shadow: 1px -2px 15px 1px rgba(0, 0, 0, 0.16);
+    background: white;
+}
+
+.header-name-section {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    justify-content: center;    
+}
+
+/* Dropdown Button */
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    padding: 5px;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
+
+.logout {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.logout-div{
+    width: 4%;
+    height: 16px
+}
+
+.image-div {
+    width: 19%;
+    height: 89%;
+}
+
+.profileImage {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    align-self: center;
+}
+
+.header-name:hover {
+    color: white;
+}

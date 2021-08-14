@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/shared/header.css' %}">
+    <script type="text/javascript" src="{% static 'js/shared/cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/shared/header.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/shared/constants.js' %}"></script>
+</head>
+
+<body>
+    <div class="header-section">
+        <div class="header-name-section">
+            Search Questions</div>
+        <div class="profile-section">
+            <div class="image-div">
+                <img class="profileImage" src="{% static 'assets/profile.png' %}" title="Logout">
+            </div>
+            <h2 id="userFullName"></h2>
+        </div>
+        <div class="logout-div">
+            <img class="logout" onclick="logout()" src="{% static 'assets/logout.png' %}">
+        </div>
+    </div>
+</body>
+
+</html>
